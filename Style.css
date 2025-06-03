@@ -1,0 +1,148 @@
+/* General */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  color: #333;
+}
+
+/* Login Page */
+.login-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(120deg, #0052cc, #007fff);
+}
+
+.login-container {
+  background: white;
+  padding: 2rem 3rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 300px;
+}
+
+.login-container h2 {
+  margin-bottom: 20px;
+  color: #0052cc;
+}
+
+.login-container input,
+.login-container button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.login-container input {
+  border: 1px solid #ccc;
+}
+
+.login-container button {
+  background-color: #0052cc;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.login-container button:hover {
+  background-color: #003f9f;
+}
+
+.error-msg {
+  color: red;
+  font-size: 0.9rem;
+}
+
+/* Dashboard */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0b3d91;
+  color: white;
+  padding: 15px 30px;
+}
+
+.profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.account-summary, .transactions, .actions, .card-section, .footer-nav {
+  padding: 20px;
+}
+
+.account-card, .atm-card {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.atm-card {
+  font-family: monospace;
+  background: #0b3d91;
+  color: white;
+  max-width: 300px;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.actions button, .footer-nav button {
+  margin: 5px;
+  padding: 10px 20px;
+  background: #0b3d91;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+footer {
+  background-color: #0b3d91;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+footer input, footer button {
+  margin: 5px;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.support-links a {
+  color: white;
+  text-decoration: underline;
+}
+
+/* Modal Form */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 400px;
+}
+
+.close {
+  float: right;
+  font-size: 28px;
+  cursor: pointer;
+}
