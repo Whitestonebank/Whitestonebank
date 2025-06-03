@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Whitestone Bank Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="dashboard">
+  <header>
+    <div class="bank-name">Whitestone Bank</div>
+    <div class="language-toggle">🌐 English</div>
+    <div class="profile"><img src="profile.jpg" alt="Sarah Hilton" /></div>
+  </header>
+
+  <main>
+    <section class="account-summary">
+      <h2>Account Summary</h2>
+      <div class="account-card">
+        <p><strong>Savings:</strong> $35,000,000.00</p>
+        <p><strong>Checking:</strong> $50,000.00</p>
+        <p><strong>Account Number:</strong> 003389676297</p>
+      </div>
+    </section>
+
+    <section class="transactions">
+      <h3>Transaction History - June 2025</h3>
+      <ul>
+        <li>01/06/2025 - Deposit - $10,000,000.00</li>
+        <li>05/06/2025 - Wire Transfer - $1,000,000.00</li>
+        <li>10/06/2025 - Bill Payment - $25,000.00</li>
+        <li>15/06/2025 - Local Transfer - $100,000.00</li>
+      </ul>
+    </section>
+
+    <section class="actions">
+      <button onclick="openForm('Wire Transfer')">Wire Transfer</button>
+      <button onclick="openForm('Local Transfer')">Local Transfer</button>
+      <button onclick="openForm('Internal Transfer')">Internal Transfer</button>
+      <button onclick="openForm('Buy Crypto')">Buy Crypto</button>
+      <button onclick="openForm('Pay Bills')">Pay Bills</button>
+      <button onclick="openForm('Add Beneficiary')">Add Beneficiary</button>
+    </section>
+
+    <section class="card-section">
+      <h3>ATM Card</h3>
+      <div class="atm-card">
+        <p class="name">Sarah Hilton</p>
+        <p class="number">5264 8392 1463 7852</p>
+        <p class="valid">Valid Thru: 04/28</p>
+        <p class="cvv">CVV: 324</p>
+      </div>
+    </section>
+
+    <section class="footer-nav">
+      <button>Auto Save Budget</button>
+      <button>Home</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>@2025 Whitestone Bank PLC</p>
+    <input type="text" placeholder="Authorization Key" />
+    <button onclick="alert('Verifying identity & clearing Standard Security Clearance Fee...')">Verify & Clear Bank Fees</button>
+    <div class="support-links">
+      <a href="#">Contact Support</a> | <a href="#">Report</a>
+    </div>
+  </footer>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span onclick="closeForm()" class="close">&times;</span>
+      <h3 id="form-title">Form</h3>
+      <form id="bankForm">
+        <input type="text" placeholder="Recipient Name" required />
+        <input type="text" placeholder="Account / Wallet Address" required />
+        <input type="number" placeholder="Amount" required />
+        <button type="submit">Done</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function openForm(type) {
+      document.getElementById("modal").style.display = "block";
+      document.getElementById("form-title").innerText = type + " Form";
+    }
+
+    function closeForm() {
+      document.getElementById("modal").style.display = "none";
+    }
+
+    document.getElementById("bankForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      alert("Please verify your identity to clear Standard Security Clearance Fee.");
+      closeForm();
+    });
+  </script>
+</body>
+</html>
